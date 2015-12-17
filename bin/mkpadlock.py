@@ -22,8 +22,6 @@ import argparse
 import os
 import sys
 
-import qubes.imgconverter
-
 try:
     import qubes.imggen as imggen
 except ImportError:
@@ -41,7 +39,7 @@ _parser.add_argument('-D', '--dispvm', action='store_true',
 _parser.add_argument('file', metavar='FILE.png',
     help='Destination filename (PNG)')
 _parser.set_defaults(
-    size=qubes.imgconverter.ICON_MAXSIZE,
+    size=512,
     colour='0x3465a4',
     dispvm=False
 )
